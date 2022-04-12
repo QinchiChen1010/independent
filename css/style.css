@@ -1,0 +1,625 @@
+/*==================================================================*/
+/*                           Sementic Tags                          */
+/*==================================================================*/
+
+/*Add padding and margin to space out the page.
+Make the font larger too.*/
+html{
+	font-size: 16px;
+	font-family: 'Roboto', Helvetica, sans-serif;
+}
+body{
+	padding: 0;
+	margin: 0;
+	border: none;
+}
+
+header{
+	padding-top: 0;
+}
+
+footer p{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+	text-align: center;
+	font-style: italic;
+}
+
+main{
+	width: 100%;
+}
+
+nav{
+	margin: 0;
+	padding: 0;
+}
+
+/*==================================================================*/
+/*                            Text styles                           */
+/*==================================================================*/
+a {
+	text-decoration: none;
+}
+
+/*Make the h1 heading bigger with a bold font*/
+h1{
+	font-size: 2rem;
+	line-height: 4rem;
+	font-weight: bold;
+}
+
+/*Make the h2 heading match h1*/
+h2{
+	font-size: 1.5rem;
+	line-height: 3rem;
+	font-weight: bold;
+	text-align: center;
+}
+h3{
+	font-size: 1.2rem;
+	line-height: 2.5rem;
+	font-weight: bold;
+}
+
+p {
+	font-size:1rem;
+	line-height: 1.5rem;
+}
+
+
+/*==================================================================*/
+/*                    Top navigation bar                            */
+/*==================================================================*/
+@keyframes logoanimation {
+	0%   {
+	  width:5px;
+	  opacity: 0;
+	}
+	100% {
+	  width:6vh;
+	  opacity: 1;
+	}
+}
+#logo{
+	animation-name: logoanimation;
+	animation-duration: 5s;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	background-color: #FFFFFF;
+	padding-bottom: 1rem;
+}
+.nav_links a{
+	color:#8a8a8a;
+	margin: 0.8em;
+	line-height: 1.8rem;
+}
+.nav_links a:hover{
+	font-weight: bold;
+}
+.active a{
+	color:#000000;
+}
+header img{
+	width: 6vh;
+	margin: 0.8em;
+}
+.nav_links{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1{
+	text-align: center;
+	line-height: 3rem;
+}
+
+/*==================================================================*/
+/*                    bottom navigation bar                         */
+/*==================================================================*/
+footer nav ul{
+	padding-top: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer nav ul li a{
+	color:#8a8a8a;
+	line-height: 1.5rem;
+}
+
+footer nav ul li a:hover{
+	text-decoration: underline;
+}
+
+.bottom_active a{
+	color:#000000;
+}
+
+/*==================================================================*/
+/*                    homepage intro part.                          */
+/*==================================================================*/
+@keyframes bg-animation{
+	0% {background-position: left;}
+	100% {background-position: right;}
+}
+.intro{
+	height: 75vh;
+	background-image: linear-gradient(
+		45deg,
+		#845ec2,
+		#d65db1,
+		#ff6f91,
+		#ff9671 );
+	background-size: 400%;
+	animation: bg-animation 15s infinite alternate;
+	display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+}
+.introtext{
+	grid-column: 2/3;
+	align-self: center;
+	color:#FFFFFF
+}
+
+.skip-button{
+	background-color: #FFFFFF;
+	width: 8rem;
+	height: 1.8rem;
+	border-radius: 0.5rem;
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: bold;
+	margin-top: 1.5rem;
+	padding-top: 1rem;
+}
+.skip-button:hover{
+	position: relative;
+	left: -3px;
+	top: -3px;
+	box-shadow: 3px 3px 3px #000000;
+}
+
+
+
+/*==================================================================*/
+/*                    homepage project list.                        */
+/*==================================================================*/
+#project{
+	margin: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 20fr 1fr;
+	row-gap:2rem;
+}
+#project img{
+	width: 100%;
+	border-radius: 1rem 1rem 0 0;
+}
+.one_project{
+	grid-column: 2/3;
+	border: 2px solid #845ec2;
+	border-radius: 1rem;
+
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.project_text{
+	justify-self: center;
+	align-self: center;
+	margin: 1.5rem;
+}
+#project:hover{
+	border: #000000;
+}
+
+.keywords{
+	color: #845ec2;
+	font-style: italic;
+	font-size: 0.9em;
+}
+
+/*==================================================================*/
+/*                           About Page                             */
+/*==================================================================*/
+.coverhead{
+	background-color: #e5e5f7;
+	opacity: 0.8;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #e8bee155, #e8bee1 );
+	height: 25vh;
+}
+.about_me{
+	background: rgba(255, 255, 255, 0.5);
+	position: relative;
+	top: 9vh;
+	text-align: center;
+}
+.contain_about{
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+	row-gap: 1rem;
+}
+.profile{
+	grid-column: 2/3;
+	justify-self: center;
+}
+.self-intro{
+	grid-column: 2/3;
+}
+.linkedIn{
+	grid-column: 2/3;
+	justify-self: center;
+}
+
+/*==================================================================*/
+/*                           Contact Page                           */
+/*==================================================================*/
+.contactPage{
+	background-color: #e5e5f7;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 20px ), repeating-linear-gradient( #e8bee155, #e8bee1 );
+	min-height: 120vh;
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+	row-gap: 2rem;
+}
+
+.contact_Me{
+	background: rgba(255, 255, 255, 0.5);
+	text-align: center;
+	grid-column: 2/3;
+	align-self: center;
+}
+
+/* Form Style */
+.fa-solid{
+	color: #8453c2;
+}
+
+form {
+	grid-column: 2/3;
+}
+
+legend{
+	position: relative;
+	top: -0.8rem;
+	font-style: italic;
+}
+
+label{
+	display: inline-block;
+	margin-top: 1.8rem;
+	font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+
+input{
+	width: 85%;
+	padding: 12px 20px;
+	display: block;
+	border: 1px solid #845ec2;
+	border-radius: 0.8rem;
+	margin: auto;
+	font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+textarea{
+	width: 85%;
+	height: 30vh;
+	padding: 12px 20px;
+	margin: auto;
+	display: block;
+	border: 1px solid #8453c2;
+	border-radius: 0.8rem;
+	font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+input[type=checkbox]{
+	display:inline;
+}
+
+input[type=submit] {
+	background-color: #8453c2;
+	color: white;
+	padding: 14px 20px;
+	margin: auto;
+	cursor: pointer;
+	width: 60%;
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+input[type=submit]:hover {
+	position: relative;
+	left:-3px;
+	top:-3px;
+}
+
+
+/*==================================================================*/
+/*                          project page                            */
+/*==================================================================*/
+.cover img{
+	width: 100vw;
+	margin-bottom: 2rem;
+}
+
+.overview{
+	background-color: #dccbf3;
+	padding: 2rem;
+	margin-top: 2rem;
+}
+
+.myrole{
+	padding: 2rem;
+}
+.myrole img{
+	width: 100%;
+}
+
+.glance{
+	background-color: #dccbf3;
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 2rem;
+	justify-content: center;
+	align-content: center;
+}
+
+.glance p{
+	text-align: center;
+	font-style: italic;
+}
+.onePic{
+	justify-self: center;
+}
+
+
+/*parallel background image*/
+.pagebreak{
+	background-image: url("../images/xiao_o/pagebreak_mobile.png");
+	background-color: #030630;
+	min-height: 20vh;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	padding: 2rem;
+}
+.pagebreak h2, .pagebreak p{
+	color: #FFFFFF;
+}
+
+.steps{
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	row-gap: 2rem;
+}
+
+.onestep img{
+	width: 100%;
+}
+
+.imgshowcase img{
+	display: block;
+ 	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+.mobilenoshow img{
+	display: none;
+}
+
+/*different pages's variation!!!!!!*/
+.eapp{
+	background-color: #e6ebf3;
+}
+
+
+/*==================================================================*/
+/*                          video style                             */
+/*==================================================================*/
+
+.options{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.video{
+	display: block;
+	width:85vw;
+	height: auto;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	margin: 0 auto;
+}
+
+figcaption{
+	padding: 1rem;
+	text-align: center;
+}
+
+button{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	flex-basis: 180px;
+	font-size:1.25rem;
+}
+
+
+/*==================================================================*/
+/*                          Scroll Animation                        */
+/*==================================================================*/
+.kids{
+	z-index: 1;
+	position: absolute;
+	left: 20vw;
+	top:20vh;
+	font-size: 3rem;
+
+}
+.kidscaption{
+	font-size: 0.8rem;
+	position:absolute;
+	z-index: 1;
+	left:22vw;
+	top:28vh;
+	font-style: italic;
+}
+
+.bodylike {
+	height: 80vh;
+	position: sticky;
+	background: #e6ebf3;
+  }
+
+canvas {
+	position: absolute;
+	left: 50vw;
+	top:40vh;
+	transform: translate(-50%, -50%);
+
+  }
+
+
+
+/*==================================================================*/
+/*                  @media   screens                                */
+/*==================================================================*/
+
+/* web screen */
+@media screen and (min-width: 900px){
+    html{
+		font-size: 18px;
+	}
+	/* top navigation */
+	header{
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top:0;
+        width: 100%;
+		padding-bottom: 0;
+		z-index: 9;
+    }
+    .nav_links{
+        display: flex;
+		flex-direction: row;
+        justify-content: space-between;
+    }
+	/* bottom navigation */
+	footer nav ul{
+		flex-direction: row;
+		justify-content: space-around;
+	}
+	footer nav ul li::before{
+		content:"👍 ";
+	}
+
+	/* homepage intro */
+	.intro{
+		height: 90vh;
+		grid-template-columns: 3fr 5fr 3fr;
+	}
+
+	/* homepage project list */
+	#project{
+		margin-top: 5rem;
+		grid-template-columns: 3fr 20fr 3fr;
+		row-gap:5rem;
+	}
+	.one_project{
+		grid-template-columns: 1fr 1fr;
+	}
+	#project img{
+		border-radius: 1rem 0 0 1rem;
+		height: 100%;
+	}
+
+	/* about page */
+	.coverhead{
+		height: 50vh;
+	}
+	.about_me{
+		top:20vh;
+	}
+	.contain_about{
+		grid-template-columns: 3fr 5fr 10fr 3fr;
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+	.profile{
+		grid-column: 2/3;
+		justify-self: start;
+	}
+	.self-intro{
+		grid-column: 3/4;
+	}
+	.linkedIn{
+		grid-column: 3/4;
+		justify-self: start;
+	}
+
+	/* contact page */
+	.contactPage{
+		grid-template-columns: 5fr 7fr 5fr;
+	}
+	/* project page */
+	.overview{
+		padding: 3rem 30%;
+	}
+
+	.myrole{
+		padding: 3rem 30%;
+	}
+
+	.glance{
+		padding: 6rem;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.glance h2{
+		grid-column: 2/3;
+	}
+	.onePic{
+		grid-row: 2/3;
+	}
+
+	.pagebreak{
+		background-image: url("../images/xiao_o/pagebreak_pc.png");
+		min-height: 70vh;
+		padding: 0 30%;
+	}
+	.pagebreak h2, .pagebreak p{
+		position:relative;
+		top:30vh;
+
+	}
+
+	.steps{
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 5rem;
+		padding: 10rem;
+	}
+
+	.mobilenoshow img{
+		display: block;
+	}
+
+
+
+  }
+
+/* reduce motion */
+@media screen and (prefers-reduced-motion: reduce){
+	html{
+	  animation: none;
+	}
+  }
